@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=
+    , initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="clicking-mathod"></p>
+    <input id="input-name" type="text" >
+    <button id="update-filed">update</button>
+    <button onclick="justFunction ()"> just function</button>
+    <button id="handle-event"> direct add EventListed</button>
+    <script> 
+    function justFunction (){
+        const clickMathod = document.getElementById('clicking-mathod')
+        clickMathod.innerText = ' set by using function'
+    }
+
+    // derekt
+    document.getElementById('handle-event').addEventListener('click', function(){
+        const p = document.getElementById('clicking-mathod')
+        p.innerText = 'set direct by add function'
+    })
+
+    document.getElementById('update-filed').addEventListener('click', function (){
+        const namefield = document.getElementById('input-name')
+        const p = document.getElementById('clicking-mathod')
+        p.innerText = namefield.value;
+        namefield.value = '';
+    })
+    </script>
+
+</body>
+</html>

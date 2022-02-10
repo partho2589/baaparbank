@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1> Mory events</h1>
+    <section>
+        <h3 id="secret-info"> Very very most improtant</h3>
+        <input id="delete-confarm" type="text " placeholder="Please tipy delete">
+        <button id="delete-btn" disabled> Delete </button>
+    </section>
+
+    <script> 
+     document.getElementById('delete-btn').addEventListener('click',function (){
+         document.getElementById('secret-info').style.display = 'none'
+     })
+     //focus
+     document.getElementById('delete-confarm').addEventListener('focus',function (){
+        document.body.style.backgroundColor = 'indianred'
+     })
+     //blur
+     document.getElementById('delete-confarm').addEventListener('blur',function (){
+        document.body.style.backgroundColor = 'white'
+     })
+     //keydown
+    //  document.getElementById('delete-confarm').addEventListener('keydown',function (){
+    //   const deleteFile = document.getElementById ('delete-confarm');
+    //   console.log(deleteFile.value)
+    //  })
+     //keypress
+    //  document.getElementById('delete-confarm').addEventListener('keypress',function (){
+    //   const deleteFile = document.getElementById ('delete-confarm');
+    //   console.log(deleteFile.value)
+    //  })
+     //keyup
+     document.getElementById('delete-confarm').addEventListener('keyup',function (event){
+         const deleteBtn = document.getElementById('delete-btn')
+         if (event.target.value == 'delete'){
+            deleteBtn.removeAttribute('disabled');
+         }
+         else{
+             deleteBtn.setAttribute 
+         }
+    //   const deleteFile = document.getElementById ('delete-confarm');
+    //   console.log(deleteFile.value)
+     })
+     //change
+     document.getElementById('delete-confarm').addEventListener('change',function (){
+      const deleteFile = document.getElementById ('delete-confarm');
+      console.log(deleteFile.value)
+     })
+    </script>
+</body>
+</html>
